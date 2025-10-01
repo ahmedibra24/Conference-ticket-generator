@@ -1,4 +1,46 @@
+@font-face {
+    font-family:"Inconsolata" ;
+    src: url("../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")format('truetype');
+    font-weight: 400 800;/* supports range from thin to extra bold */
+     font-stretch: 50% 200%; /* optional: width axis */
+    font-style: normal;  
+}
 :root{
     font-size: 16px;
-    
+    --Neutral :hsl(0, 0%, 100%);
+    --Neutral-300 :hsl(252, 6%, 83%);
+    --Neutral-500 :hsl(245, 15%, 58%);
+    --Neutral-700 :hsl(245, 19%, 35%);
+    --Neutral-900 :hsl(248, 70%, 10%);
+
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+    --GradientText: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+
+    --font-main: 'Inconsolata',monospace ;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-bold: 700;
+    --font-ExtraBold: 800;
+}
+*{
+    margin:0;
+    padding:0;
+    border:none;
+    list-style: none;
+    color: var(--Neutral);
+}
+body{
+    font-family:var(--font-main);
+    overflow-x: hidden;
+    letter-spacing: 1.2px;
+    background-image: url(../assets/images/background-desktop.png);
+}
+a{
+    text-decoration: none;
+    color: var(--Neutral);
+}
+img{
+    width: 100%;
+    height: 100%;
 }
