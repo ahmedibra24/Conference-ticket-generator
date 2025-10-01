@@ -15,34 +15,108 @@
   <body>
     <div class="mainContainer">
       <header>
-        <figure style="width: 30%;">
-          <img src="assets/images/logo-full.svg" alt="">
+        <figure style="width: 30%">
+          <img src="assets/images/logo-full.svg" alt="logo" />
         </figure>
       </header>
+      <!-- Form starts -->
       <main>
         <section>
           <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-          <p>Secure your spot at next at next year’s biggest coding Conference </p>
+          <p>
+            Secure your spot at next at next year’s biggest coding Conference
+          </p>
         </section>
-
+        <form action="">
+          <div>
+            <label for="upload"> Upload Avatar </label>
+            <input type="file" name="pic" id="pic" accept=".jpg,.png" />
+            <div>
+              <figure style="width: 20%">
+                <img src="/assets/images/icon-info.svg" alt="info" />
+              </figure>
+              <p>Upload your photo (jpg or PNG, max size: 500KB</p>
+            </div>
+          </div>
+          <div>
+            <label for="upload"> Full name </label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div>
+            <label for="upload"> Email Address </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
+          </div>
+          <div>
+            <label for="upload"> GitHub Username </label>
+            <input
+              type="text"
+              name="github"
+              id="github"
+              placeholder="@yourusername"
+            />
+          </div>
+          <button type="submit">Generate My Ticket</button>
+        </form>
       </main>
-      <footer></footer>
+      <!-- Form ends -->
+      <!-- Generated tickets starts -->
+      <main>
+        <section>
+          <h1>Congrats,<span>Jonatan Kristof!</span></h1>
+          <h1>Your ticket is ready.</h1>
+        </section>
+        <section>
+          <p>We've emailed your ticket to</p>
+          <p>Jonatan@ and will send updates in</p>
+          <p>the run up to the event.</p>
+        </section>
+        <section>
+          <div>
+            <p>#60910</p>
+          </div>
+          <div>
+            <div>
+              <figure>
+                <img src="assets/images/logo-full.svg" alt="logo" />
+              </figure>
+              <p><span>Jan 31, 2025</span>/Austin, TX</p>
+            </div>
+            <div>
+              <figure>
+                <img src="assets/images/image-avatar.jpg" alt="avatar" />
+              </figure>
+              <div>
+                <h3>Jonatan Kristof</h3>
+                <div>
+                  <figure>
+                    <img src="assets/images/icon-github.svg" alt="github" />
+                  </figure>
+                  <p>@JonatanKristof0101</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Generated tickets ends -->
+      <footer>
+        Coded by <a href="#">Ahmed Fawzy</a>.
+      </footer>
     </div>
 
-    <!-- Form starts -->
-
-    <!-- Form ends -->
-
-    <!-- Generated tickets starts -->
-
-    Congrats,
-    <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-    <!-- Email Address -->
-    and will send updates in the run up to the event. Coding Conf Jan 31, 2025 /
-    Austin, TX
-
-    <!-- Generated tickets ends -->
-
-    <!-- Coded by <a href="#">Ahmed Fawzy</a>. -->
+    <!-- <img src="assets/images/favicon-32x32.png" alt="" />
+    <img src="assets/images/icon-github.svg" alt="" />
+    <img src="assets/images/logo-mark.svg" alt="" />
+    <img src="assets/images/pattern-circle.svg" alt="" />
+    <img src="assets/images/pattern-lines.svg" alt="" />
+    <img src="assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="" />
+    <img src="assets/images/pattern-squiggly-line-top.svg" alt="" />
+    <img src="assets/images/pattern-ticket.svg" alt="" />
+    <img src="assets/images/favicon-32x32.png" alt="" /> -->
   </body>
 </html>
