@@ -7,43 +7,65 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/2.png"
+      href="./assets/images/Modern Tech-Inspired Logo for Ahmed Fawzy.ico"
     />
     <link rel="stylesheet" href="src/style.css" />
     <title>Conference ticket generator</title>
   </head>
   <body>
-    <div class="mainContainer">
+    <div class="background-circle"></div>
+    <div class="background-circle2"></div>
+    <div class="background-lines"></div>
+    <div class="background-bottom"></div>
+    <div class="background-top"></div>
+    
+    <div class="Container">
       <header>
-        <figure style="width: 30%">
+        <figure>
           <img src="assets/images/logo-full.svg" alt="logo" />
         </figure>
       </header>
       <!-- Form starts -->
-      <main>
+      <main  class="mainForm">
         <section>
           <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
           <p>
-            Secure your spot at next at next year’s biggest coding Conference
+            Secure your spot at next at next year’s biggest coding Conference.
           </p>
         </section>
         <form action="">
-          <div>
-            <label for="upload"> Upload Avatar </label>
-            <input type="file" name="pic" id="pic" accept=".jpg,.png" />
-            <div>
-              <figure style="width: 20%">
+          <div class="upload">
+            <label for="pic"> Upload Avatar </label>
+            <div class="uploadInp notHover"   >
+              <figure>
+                <img src="" alt="">
+              </figure>
+              <div>
+                <button type="button">Remove image</button>
+                <button type="button">Change image</button>
+              </div>
+              
+            </div>
+            <div class="uploadInp">
+              <figure>
+                <img src="assets/images/icon-upload.svg" alt="">
+              </figure>
+
+              <p>Drag and drop or click to upload</p>
+            </div>
+            <div class="info">
+              <figure>
                 <img src="/assets/images/icon-info.svg" alt="info" />
               </figure>
-              <p>Upload your photo (jpg or PNG, max size: 500KB</p>
+              <p>Upload your photo (jpg or PNG, max size: 500KB)</p>
             </div>
           </div>
-          <div>
-            <label for="upload"> Full name </label>
-            <input type="text" name="name" id="name" />
+          <div class="inputsGroup">
+            <label for="name"> Full name </label>
+            <input type="text" name="name" id="name" placeholder="enter your name" />
           </div>
-          <div>
-            <label for="upload"> Email Address </label>
+          <div class="inputsGroup">
+            <label for="email"> Email Address </label>
             <input
               type="email"
               name="email"
@@ -51,8 +73,8 @@
               placeholder="example@email.com"
             />
           </div>
-          <div>
-            <label for="upload"> GitHub Username </label>
+          <div class="inputsGroup">
+            <label for="github"> GitHub Username </label>
             <input
               type="text"
               name="github"
@@ -60,52 +82,66 @@
               placeholder="@yourusername"
             />
           </div>
-          <button type="submit">Generate My Ticket</button>
+          <button id ='submitBtn' type="submit">Generate My Ticket</button>
         </form>
       </main>
       <!-- Form ends -->
       <!-- Generated tickets starts -->
-      <main>
+      <main class="mainTicket" style="display: none;" >
         <section>
           <h1>Congrats,<span>Jonatan Kristof!</span></h1>
           <h1>Your ticket is ready.</h1>
         </section>
-        <section>
+        <section class="emailInfo">
           <p>We've emailed your ticket to</p>
-          <p>Jonatan@ and will send updates in</p>
+          <p><span>Jonatan@email.com</span> and will send updates in</p>
           <p>the run up to the event.</p>
         </section>
-        <section>
+        <!-- ticket -->
+        <section class="ticket">
           <div>
-            <p>#60910</p>
-          </div>
-          <div>
+            <!-- ticket logo and date -->
             <div>
-              <figure>
+              <figure class="ticketLogo">
                 <img src="assets/images/logo-full.svg" alt="logo" />
               </figure>
-              <p><span>Jan 31, 2025</span>/Austin, TX</p>
+              <p >Jan 31, 2025/Austin, TX</p>
             </div>
-            <div>
-              <figure>
+            <!-- ticket logo and date end -->
+            <!-- ticket avatar and info -->
+            <div class="ticketAvatarContainer">
+              <figure class="ticketAvatar">
                 <img src="assets/images/image-avatar.jpg" alt="avatar" />
               </figure>
-              <div>
-                <h3>Jonatan Kristof</h3>
-                <div>
-                  <figure>
+              <div class="ticketInfo">
+                <p class="name">Jonatan Kristof</p>
+                <div class="githubContainer">
+                  <figure class="githubIcon">
                     <img src="assets/images/icon-github.svg" alt="github" />
                   </figure>
                   <p>@JonatanKristof0101</p>
                 </div>
               </div>
             </div>
+            <!-- ticket avatar and info end  -->
           </div>
+          <!-- ticket number -->
+          <div >
+            <p class="ticketNumber">#01609</p>
+          </div>
+          <!-- ticket number end  -->
+
         </section>
+        <!-- ticket end -->
       </main>
       <!-- Generated tickets ends -->
       <footer>
-        Coded by <a href="#">Ahmed Fawzy</a>.
+        
+        <figure>
+          <a href="https://github.com/ahmedibra24/Conference-ticket-generator.git" target="_blank">
+            <img src="assets/images/code-with-fawzy-high-resolution-logo-transparent.png" alt="">
+          </a>
+        </figure>
       </footer>
     </div>
 

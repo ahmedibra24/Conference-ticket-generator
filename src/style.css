@@ -1,46 +1,360 @@
 @font-face {
-    font-family:"Inconsolata" ;
-    src: url("../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")format('truetype');
-    font-weight: 400 800;/* supports range from thin to extra bold */
-     font-stretch: 50% 200%; /* optional: width axis */
-    font-style: normal;  
+  font-family: "Inconsolata";
+  src: url("../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf")
+    format("truetype");
+  font-weight: 400 800; /* supports range from thin to extra bold */
+  font-stretch: 50% 200%; /* optional: width axis */
+  font-style: normal;
 }
-:root{
-    font-size: 16px;
-    --Neutral :hsl(0, 0%, 100%);
-    --Neutral-300 :hsl(252, 6%, 83%);
-    --Neutral-500 :hsl(245, 15%, 58%);
-    --Neutral-700 :hsl(245, 19%, 35%);
-    --Neutral-900 :hsl(248, 70%, 10%);
+:root {
+  font-size: 16px;
+  --Neutral: hsl(0, 0%, 100%);
+  --Neutral-300: hsl(252, 6%, 83%);
+  --Neutral-500: hsl(245, 15%, 58%);
+  --Neutral-700: hsl(245, 19%, 35%);
+  --Neutral-900: hsl(248, 70%, 10%);
+  --input-bg: hsla(0, 0%, 100%, 0.103);
+  --input-bg2: hsla(0, 0%, 100%, 0.082);
+  
+  --Orange-500: hsl(7, 88%, 67%);
+  --Orange-700: hsl(7, 71%, 60%);
+  --GradientText:hsl(7, 86%, 67%), hsl(0, 0%, 100%);
 
-    --Orange-500: hsl(7, 88%, 67%);
-    --Orange-700: hsl(7, 71%, 60%);
-    --GradientText: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  --font-main: "Inconsolata", monospace;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-ExtraBold: 800;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  color: var(--Neutral);
+}
+body {
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  letter-spacing: 1.2px;
+  background-image: url(../assets/images/background-desktop.png);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 60vh;
+}
+.background-circle::after{
+  content: "";
+  position: absolute;
+  top: -4rem;
+  left: 3rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/pattern-circle.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.background-circle2::after{
+  content: "";
+  position: absolute;
+  top: 21rem;
+  left: 48rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/pattern-circle.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
 
-    --font-main: 'Inconsolata',monospace ;
-    --font-regular: 400;
-    --font-medium: 500;
-    --font-bold: 700;
-    --font-ExtraBold: 800;
 }
-*{
-    margin:0;
-    padding:0;
-    border:none;
-    list-style: none;
-    color: var(--Neutral);
+.background-lines::after{
+  content: "";
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/pattern-lines.svg);
+  background-repeat: repeat-x;
+  z-index: -1;
 }
-body{
-    font-family:var(--font-main);
-    overflow-x: hidden;
-    letter-spacing: 1.2px;
-    background-image: url(../assets/images/background-desktop.png);
+.background-bottom::after{
+  content: "";
+  position: absolute;
+  top: 23rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/pattern-squiggly-line-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
 }
-a{
-    text-decoration: none;
-    color: var(--Neutral);
+.background-top::after{
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 52rem;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/pattern-squiggly-line-top.svg);
+  background-repeat: no-repeat;
+  z-index: -1;
 }
-img{
-    width: 30%;
-    height: 10%;
+a {
+  text-decoration: none;
+  color: var(--Neutral);
 }
+img {
+  width: 100%;
+  height: 100%;
+}
+main{
+  margin-bottom: 3em;
+}
+footer{
+    margin-bottom: 2em;
+}
+footer figure {
+  width: 10rem;
+}
+header figure {
+  width: 10rem;
+}
+.Container {
+
+  padding-top: 2em;
+  display: flex;
+  justify-content: start;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  
+}
+/* =============================================form start ======================================*/
+.mainForm section h1 {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 3rem;
+}
+.mainForm section p {
+  margin: 2em 0;
+  font-size: 0.95rem;
+  color: var(--Neutral-300);
+}
+
+.mainForm form .upload {
+  width: 50%;
+  margin: 0 auto;
+  text-align: start;
+}
+.mainForm form .upload .uploadInp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: .9em;
+  background-color: var(--input-bg);
+  margin-top: 0.8em;
+  width: 100%;
+  height: 8rem;
+  border-radius: 1em;
+  cursor: pointer;
+  /* border: 1px dashed var(--Neutral-500); */
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%238E8E8EFF' stroke-width='2' stroke-dasharray='11%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+.mainForm form .upload .uploadInp button{
+  height: 1.6rem;
+  width: 7rem;
+  background-color: var(--input-bg2);
+  font-size:.7rem;
+  border-radius: .3rem;
+  color: var(--Neutral-300);
+  font-weight: var(--font-medium);
+}
+.mainForm form .upload .uploadInp button:hover{
+  background-color: var(--Neutral-700);
+  cursor: pointer;
+}
+.mainForm form .upload .uploadInp:hover {
+  background-color: var(--Neutral-700);
+}
+
+.mainForm form .upload .uploadInp.notHover:hover{
+  cursor: default;
+  background-color: var(--input-bg);
+}
+
+.mainForm form .upload .uploadInp figure {
+  width: 1.8rem;
+  border: solid 1px var(--Neutral-500);
+  border-radius: 20%;
+  padding: 0.4em;
+  background-color: var(--input-bg2);
+}
+.mainForm form .upload .uploadInp p{
+  color : var(--Neutral-500)
+}
+.mainForm form .upload .info {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.6em;
+  opacity: 60%;
+}
+.mainForm form .upload .info figure {
+  width: 1rem;
+}
+.mainForm form .upload .info p {
+  font-size: 0.7rem;
+}
+
+.mainForm form  .inputsGroup {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: .8em;
+  width: 50%;
+  margin: 1em auto;
+}
+
+.mainForm form  .inputsGroup input{
+    background-color: var(--input-bg);
+    width: 97%;
+    height: 3rem;
+    padding-left: 1em;
+    border-radius: 1em;
+}
+.mainForm form .inputsGroup input:focus{
+    outline: 2px solid var(--Orange-500);
+}
+
+.mainForm form  .inputsGroup input:hover{
+    background-color: var(--Neutral-700);
+    cursor: pointer;
+} 
+
+.mainForm form  .inputsGroup input::placeholder{
+    color: var(--Neutral-500);
+    font-size: .9rem;
+}
+
+.mainForm form button[type="submit"]{
+    background-color: var(--Orange-700);
+    color: var(--Neutral-900);
+    width: 50%;
+    height: 3rem;
+    border-radius: 1em;
+    margin-top: 1em;
+    font-weight: var(--font-bold);
+    font-size: 1.2rem;
+}
+.mainForm form button[type="submit"]:hover{
+      background-color: var(--Orange-500);
+      cursor: pointer;
+}
+/* =============================================form end ======================================*/
+
+/* =============================================ticket start ======================================*/
+.mainTicket section h1{
+  width: 100%;
+  margin: 0 auto;
+  font-size: 3rem;
+}
+.mainTicket section h1 span{
+background: linear-gradient(90deg, var(--GradientText));
+background-clip: text;
+color: transparent;
+}
+.mainTicket section{
+  margin-bottom: 2em;
+}
+.mainTicket .emailInfo p{
+  margin: .3em 0;
+  font-size: 1rem;
+  color: var(--Neutral-300);
+}
+.mainTicket .emailInfo p span{
+  color: var(--Orange-700);
+  font-weight: var(--font-medium);
+}
+/* ====================== handle ticket start ====================== */
+.mainTicket .ticket {
+  background-color: var(--Neutral-900);
+  background-image: url(../assets/images/pattern-ticket.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 4em auto;
+  width: 70%;
+  height: 13rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3em;
+  
+}
+/* ================= ticket logo and date ============= */
+.mainTicket .ticket .ticketLogo {
+  width: 13rem;
+}
+.mainTicket .ticket .ticketLogo + p {
+  font-size: 0.9rem;
+  color: var(--Neutral-500);
+  font-weight: var(--font-medium);
+  padding-left: 3em;
+}
+/* ================= ticket logo and date end ============= */
+/* ================= ticket avatar and info ============= */
+
+/* avatar */
+.mainTicket .ticket .ticketAvatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 3em;
+
+}
+.mainTicket .ticket .ticketAvatar {
+  width: 4rem;
+  border-radius: 18%;
+  overflow: hidden;
+}
+/* avatar end */
+
+/* info */
+.mainTicket .ticket .githubContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4em;
+}
+.mainTicket .ticket .githubContainer p {
+  font-size: 0.9rem;
+  color: var(--Neutral-500);
+  font-weight: var(--font-medium);
+}
+.mainTicket .ticket .ticketInfo .name {
+  font-size: 1.4rem;
+  margin-bottom: .4em;
+  text-align: start;
+  color:var(--Neutral);
+  font-weight: var(--font-medium);
+} 
+.mainTicket .ticket .githubIcon {
+  width: 1.2rem;
+}
+/* info end */
+/* ================= ticket avatar and info end ============= */
+/* ============ ticket number ======= */
+.mainTicket .ticket .ticketNumber {
+  color: var(--Neutral-500);
+  writing-mode: vertical-lr; /* vertical from bottom to top */
+  font-size: 1.5rem;
+}
+/* =========== ticket number end ====== */
+/* ====================== handle ticket end ====================== */
+
+/* =============================================ticket end ======================================*/
+
